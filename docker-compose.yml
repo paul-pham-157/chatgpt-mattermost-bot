@@ -1,5 +1,5 @@
 ---
-version: '3.7'
+version: "3.7"
 
 services:
   chatbot:
@@ -7,6 +7,7 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      MATTERMOST_URL: https://mattermost.server
-      MATTERMOST_TOKEN: abababacdcdcd
-      OPENAI_API_KEY: sk-234234234234234234
+      MATTERMOST_URL: ${MATTERMOST_URL}
+      MATTERMOST_TOKEN: ${MATTERMOST_TOKEN}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      MATTERMOST_BOTNAME: ${MATTERMOST_BOTNAME}
